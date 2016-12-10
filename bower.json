@@ -1,0 +1,22 @@
+{
+  "name": "webpack_sample",
+  "description": "",
+  "main": "",
+  "authors": [
+    "maeda_kana"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.1"
+  }
+}

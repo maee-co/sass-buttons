@@ -1,0 +1,39 @@
+@import "base/normalize";
+@import "base/valiables";
+@import "base/util";
+@import "base/default";
+
+@import "elements/button";
+
+.wrapper {
+  width: 80vw;
+  margin: 40px auto;
+
+  header {
+    padding: 30px;
+    p {
+      color: #666;
+      padding: 10px 0;
+      text-align: center;
+      line-height: 1.4em;
+      @include util-font-size($font-size-small);
+      a {
+        &:hover, &:active {
+          color: $font-color-link-hover;
+        }
+      }
+    }
+  }
+  section {
+    margin: 60px auto;
+    background: rgba(255,255,255,.8);
+    padding: 30px;
+    border-radius: 10px;
+    p {
+      display: flex;
+      justify-content: center;
+      flex-flow: row wrap;
+      align-items: center;
+    }
+  }
+}

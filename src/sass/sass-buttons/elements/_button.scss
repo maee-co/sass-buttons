@@ -1,0 +1,129 @@
+
+%color-button-style {
+  color: $font-color-white;
+  &:link, &:visited, &:hover {
+    color: $font-color-white;
+  }
+  &:hover {
+    -webkit-filter: brightness(106%);
+  }
+  &:active {
+    -webkit-filter: brightness(106%);
+  }
+}
+
+%button-base {
+  display: inline-flex;
+  justify-content: center;
+  min-width: 150px;
+  margin: 8px;
+  padding: 20px;
+  @include util-font-size($font-size-large);
+  color: $font-color-light;
+  line-height: 1em;
+  background: $background-default;
+  border: rgba(0,0,0,.1) solid 1px;
+  box-shadow: -1px -1px rgba(0,0,0,.2) inset;
+
+  // transition
+  transition:
+    -webkit-filter .3s $ease-out-cubic,
+    transform .3s $ease-out-expo,
+    background .4s $ease-out-cubic
+  ;
+
+  &:link, &:visited {
+    color: $font-color-light;
+  }
+  &:hover {
+    transform: scale(1.1);
+    -webkit-filter: brightness(101%);
+  }
+
+  // click
+  &:active {
+    -webkit-filter: brightness(101%);
+    transform: translate(1px, 1px) scale(1.1);
+    box-shadow: 1px 1px rgba(0,0,0,.2) inset;
+  }
+
+  // variation
+  &.is-pink {
+    @extend %color-button-style;
+    background: $background-pink;
+  }
+  &.is-lime {
+    @extend %color-button-style;
+    background: $background-lime;
+  }
+  &.is-cyan {
+    @extend %color-button-style;
+    background: $background-cyan;
+  }
+  &.is-purple {
+    @extend %color-button-style;
+    background: $background-purple;
+  }
+
+  // size
+  &.is-small {
+    padding: 14px;
+    min-width: 80px;
+    @include util-font-size($font-size-small);
+  }
+  &.is-large {
+    min-width: 180px;
+    @include util-font-size($font-size-xlarge);
+  }
+
+}
+
+.button {
+  @extend %button-base;
+  border-radius: 4px;
+  i {
+    margin-right: 4px;
+  }
+  span {
+    line-height: 1em;
+  }
+
+  &.is-fix-width {
+    width: 200px;
+  }
+
+  .fa-spin {
+    display: none;
+    @include util-font-size($font-size-large);
+  }
+  &.is-loading {
+    .fa-spin {
+      display: inline-block;
+    }
+    span {
+      display: none;
+    }
+  }
+
+}
+
+.button-circle {
+  @extend %button-base;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+
+  &.is-small {
+    width: 100px;
+    height:100px;
+  }
+
+  &:hover {
+    color: $font-color-white;
+    background: $background-pink;
+    transform: scale(1.1) rotate(360deg);
+  }
+}

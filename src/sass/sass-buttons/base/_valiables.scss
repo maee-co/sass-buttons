@@ -1,0 +1,29 @@
+
+// color
+$font-color-default: #444;
+$font-color-light: #666;
+$font-color-white: #fff;
+$font-color-link-hover: #c0ca33;
+
+// background-color
+$background-default: #F6F6F6;
+$background-cyan: #26C6DA;
+$background-pink: #F06292;
+$background-lime: #C0CA33;
+$background-purple: #AB47BC;
+
+// breakpoint
+$break-point-mb: 640px;
+
+// font-size
+$font-size-base: 62.5%; //10px
+$font-size-xsmall: 14;
+$font-size-small: 16;
+$font-size-middle: 20;
+$font-size-large: 24;
+$font-size-xlarge: 30;
+$font-size-xxlarge: 60;
+
+// easing
+$ease-out-cubic: cubic-bezier(0.215, 0.61, 0.355, 1);
+$ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
